@@ -1,0 +1,27 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 7070
+  adminConnectors:
+    - type: http
+      port: 8008
+  gzip:
+    includedMethods: ["GET", "POST"]
+
+
+database:
+  driverClass: org.h2.Driver
+  url: jdbc:h2:file:./data/db
+  user: sa
+  password: sa
+
+#dataSourceAdapter:
+#  driverClass: org.h2.Driver
+#  url: jdbc:h2:file:./data/db
+#  user: sa
+#  password: sa
+
+logging:
+  level: INFO
+  appenders:
+    - type: console

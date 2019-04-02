@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Start" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.drift.interview.ReportingApplication" />
+    <module name="interview-conversations" />
+    <option name="PROGRAM_PARAMETERS" value="server config.yaml" />
+    <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    <method />
+  </configuration>
+</component>

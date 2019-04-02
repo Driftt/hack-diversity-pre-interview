@@ -1,0 +1,21 @@
+[{
+ "id": 1,
+  "name": "Pete",
+  "email": "pete@drift.com"
+},{
+  "id": 2,
+  "name": "Carolina",
+  "email": "carolina@drift.com"
+},{
+  "id": 3,
+  "name": "Chelsea",
+  "email": "chelsea@drift.com"
+},{
+  "id": 4,
+  "name": "Andrew",
+  "email": "andrew@drift.com"
+},{
+  "id": 5,
+  "name": "Josh",
+  "email": "josh@drift.com"
+}]
