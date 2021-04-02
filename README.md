@@ -18,7 +18,7 @@ Someone else has gotten a head start on this service and have handed it off to y
 2. Get this Java app set up (instructions below, feel free to use the internet for help!)
 3. Complete the "health check" challenge
 4. Complete the "average response time" challenge
-5. Submit your work by emailing a link to your repo to bborowski@drift.com and fdumlao@drift.com
+5. Submit your work by emailing a link to your repo to Drift
 
 ## Setup
 
