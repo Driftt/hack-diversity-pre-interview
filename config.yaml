@@ -25,3 +25,4 @@ logging:
   level: INFO
   appenders:
     - type: console
+

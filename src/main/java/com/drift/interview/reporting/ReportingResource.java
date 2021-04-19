@@ -31,8 +31,8 @@ public class ReportingResource {
   }
 
   @GET
-  @Path("healthcheck")
-  public Result check() {
+  @Path("/healthcheck")
+  public Result run() {
     return Result.OK;
   }
 

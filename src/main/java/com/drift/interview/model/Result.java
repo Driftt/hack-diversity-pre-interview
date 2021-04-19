@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Result {
-  private static final String OK_RESULT = "OK";
+  private static final String OK_RESULT = "200 OK";
 
   @JsonIgnore
   public static final Result OK = new Result();
@@ -15,11 +15,12 @@ public class Result {
   private final String result;
 
   public Result() {
-    this("OK");
+    this(OK_RESULT);
   }
 
   public Result(String result) {
     this.result = result;
+
   }
 }
 

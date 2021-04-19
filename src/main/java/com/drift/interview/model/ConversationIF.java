@@ -13,4 +13,6 @@ public interface ConversationIF {
   long getId();
 
   List<Message> getMessages();
+
+  //int getNumberofMessages();
 }
