@@ -32,4 +32,7 @@ public interface MessageIF {
   default String getMessage() {
     return CheapSentenceGenerator.generate();
   }
+
+  //@Default
+  //default int getNumberofMessages() { return 0; }
 }

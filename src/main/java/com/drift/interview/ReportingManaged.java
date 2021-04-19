@@ -1,5 +1,6 @@
 package com.drift.interview;
 
+import com.codahale.metrics.health.HealthCheck;
 import com.drift.interview.client.util.ConversationGenerator;
 import com.drift.interview.dao.ConversationDAO;
 import com.drift.interview.dao.MessageDAO;
@@ -11,7 +12,9 @@ import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.Inject;
+import io.dropwizard.Configuration;
 import io.dropwizard.lifecycle.Managed;
+import io.dropwizard.setup.Environment;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -57,6 +60,7 @@ public class ReportingManaged implements Managed {
 
     initializeTeamMembers();
     initializeConversations();
+
   }
 
   private void generateConversations(List<TeamMember> teamMembers) {
@@ -97,6 +101,23 @@ public class ReportingManaged implements Managed {
       throw new RuntimeException(ex);
     }
   }
+
+
+  //Goal for the healthcheck is to see if the the url, localhost:7070/metrics/healthcheck is running or not.
+  public static class AppHealthCheck extends HealthCheck
+  {
+    String url = "localhost:7070/metrics/healthcheck";
+    protected Result check() throws Exception
+    {
+      if( url.equals("200 Okay")){
+        System.out.println("200 OK!!!");
+        return Result.healthy();
+      }
+      System.out.println("404 NOT OKAY!!");
+      return Result.unhealthy("Error message");
+    }
+  }
+
 
   @Override
   public void stop() {
